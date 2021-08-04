@@ -8,7 +8,40 @@
     <link rel="stylesheet" href="mystyles.css" />
   </head>
   <body>
-    <!-- Here you will practice Layouts in Tailwind -->
+    <!-- Here you will practice Layouts in Tailwind - use tailwindcss.com for additional documentation -->
+    <!-- SPACING -->
+    <!-- Use p-0 -> p-96 for padding on all sides 
+    the numerical value is the amount of rem multiplied by 4 (p-20 is equivalent to padding: 5rem)
+    px-... is for padding on left and right
+    py-... is for padding on top and bottom
+    pt-... is for padding on top
+    pr-... is for padding on right
+    pb-... is for padding on bottom
+    pl-... is for padding on left  
+    -->
+    <!-- Margins follow the same rules -->
+    <!-- m-0 -> m-96 for margin on all sides
+    you can also do negative margin using -m
+    mx-... is for margins on left and right
+    my-... is for margins on top and bottom
+    mt-... is for margins on top
+    mr-... is for margins on right
+    mb-... is for margins on bottom
+    ml-... is for margins on left
+    -->
+    <!-- Space Between is used for controlling spaces betweem child elements -->
+    <!-- syntax for spacing is space-x-0
+    you can also add a '-' before for negative spacing
+    you use an x for horizontal spacing and a y for vertical spacing
+    the number can be a number 0 to 96 and follows same rem rules as padding and margins
+    -->
+    <div class="flex justify-start space-x-4 p-8">
+      <div class="w-16 h-16 text-white text-2xl font-extrabold rounded-md flex items-center justify-center bg-purple-500">1</div>
+      <div class="w-16 h-16 text-white text-2xl font-extrabold rounded-md flex items-center justify-center bg-purple-500">2</div>
+      <div class="w-16 h-16 text-white text-2xl font-extrabold rounded-md flex items-center justify-center bg-purple-500">3</div>
+    </div>
+
+
     <!-- Containers can adjust an element's width based on a screen breakpoint -->
     <div class="container sm">
       <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, aut a? Repellat molestiae magnam repudiandae consequuntur? Ab ut enim reprehenderit, repellendus modi excepturi tenetur nemo expedita quae, quasi dolorum doloribus!</div>
@@ -65,13 +98,15 @@
     </div>
     <!-- FLEX IN TAILWIND -->
     <!-- use "flex" to create a block level flex container -->
+    <!-- use the 'flex-row', 'flex-row-reverse', 'flex-col', 'flex-col-reverse' to change flex direction-->
+    <!-- use 'flex-nowrap', 'flex-wrap', or 'flex-wrap-reverse' for wrap styling -->
     <div class="p-4 flex space-x-4 bg-green-300 rounded-md">
       <div class="flex-1 rounded-md text-white font-extrabold text-center bg-green-500 p-6">1</div>
       <div class="flex-1 rounded-md text-white font-extrabold text-center bg-green-500 p-6">2</div>
       <div class="flex-1 rounded-md text-white font-extrabold text-center bg-green-500 p-6">3</div>
     </div>
     <!-- GRID IN TAILWIND -->
-    <!-- Use "grid" to create a grid container -->
+    <!-- Use "grid" to creaet a grid container -->
     <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
       <div class="p-4 grid gap-4 grid-cols-3 bg-purple-300 rounded-md">
         <div class="bg-purple-400 rounded-md h-12"></div>
@@ -117,8 +152,14 @@
     </div>
     <!-- You can also use the "hidden" class to hide an element from the page -->
     <!-- You can also use 'visible' or 'invisible' to control visibility -->
-    <!-------------------------------------------------------------------------->\
-    
+    <!-------------------------------------------------------------------------->
+    <!-- Hover, focus, and other states -->
+    <!-- You can use hover: and focus: to create hover and click on effects -->
+    <form class="flex py-8 w-full max-w-sm mx-auto space-x-3">
+      <input class="flex-1 appearance-none border border-transparent w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-md rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="email" placeholder="Your email">
+      <button class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">Sign Up</button>
+    </form>
+
 
     <!-------------------------------------------------------------------------->
   </body>
